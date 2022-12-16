@@ -1,0 +1,51 @@
+.resizable-panel {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  min-height: 100px;
+  max-height: 80vh;
+  border-radius: 20px;
+  background-color: rgb(243 201 110 / 100%);
+}
+
+.resizer {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: row-resize;
+}
+
+.resizer-handle {
+  width: clamp(30px, 20%, 60px);
+  height: 5px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  padding: 0 20px;
+  max-height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.container h1 {
+  margin: 0;
+}
+
+.content {
+  overflow: auto;
+}
+
+@media (max-width: 700px) {
+  .resizable-panel {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 10px 10px 0 0;
+  }
+}
